@@ -1,5 +1,5 @@
 let listaDeNumerosSorteados = [];
-let numeroLimite = 10;
+let numeroLimite = 100;
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1
 
@@ -29,7 +29,7 @@ function exibirTextoNaTela(tag,texto)
 function exibirMensagemInicial()
 {
     exibirTextoNaTela('h1', 'JOGO DO CHUTE MAROTO');
-    exibirTextoNaTela('p', 'Chuta um numero até 10 ai brother');
+    exibirTextoNaTela('p', 'Chuta um numero até 100 ai brother');
 }
 exibirMensagemInicial()
 function verificarChute()
