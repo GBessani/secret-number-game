@@ -1,18 +1,21 @@
-let listaDeNumerosSorteados = [];
-let numeroLimite = 50;
-let numeroSecreto = gerarNumeroAleatorio();
-let tentativas = 1
+let listaDeNumerosSorteados = []; // array
+let numeroLimite = 50; // inteiro
+let numeroSecreto = gerarNumeroAleatorio(); // inteiro
+let tentativas = 1 // inteiro
 
 function gerarNumeroAleatorio()
 {
     let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
+    //^ serve para sortear um numero aleatório e arredondar para um numero inteiro
     let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
-   
+    //^ serve para mostrar a quantidade de elemntos em um array
     if(quantidadeDeElementosNaLista == numeroLimite){
         listaDeNumerosSorteados = [];
     }
     if(listaDeNumerosSorteados.includes(numeroEscolhido)){
+        // o .includes serve para verificar se o elemento especifico esta incluso em um array
         return gerarNumeroAleatorio();
+        // caso o elemento ja esteja incluso no array a função sera chamada dentro dela mesma (isso se chama funcao recursiva)
     } else {
         listaDeNumerosSorteados.push(numeroEscolhido);
         console.log(listaDeNumerosSorteados)
